@@ -2,22 +2,20 @@
 <ion-content>
      <div class="container">
        <div class="top_pic_div">
-         <img src="../../assets/img/login_ic.png" class="top_pic">
+         <img src="./login_ic.png" class="top_pic">
        </div>
        <div class="form">
-         <ion-list>
-           <ion-item>
-             <ion-label floating>Username</ion-label>
-             <ion-input type="text"></ion-input>
-           </ion-item>
-           <ion-item>
-             <ion-label floating>Password</ion-label>
-             <ion-input type="password"></ion-input>
-           </ion-item>
-         </ion-list>
+         <ion-item style="width: 100%;">
+           <ion-label floating>登录</ion-label>
+           <ion-input type="text" [(ngModel)]="user"  clearOnEdit="true"></ion-input>
+         </ion-item>
+         <ion-item style="width: 100%;">
+           <ion-label floating>密码</ion-label>
+           <ion-input type="password"  [(ngModel)]="pass"></ion-input>
+         </ion-item>
        </div>
-       <div style="text-align: center">
-         <button ion-button style="width: 74%;margin-left: 13%;margin-right: 13%;background-color: firebrick">登录</button>
+       <div style="text-align: center;margin-top: 15px;">
+         <button ion-button style="width: 74%;margin-left: 13%;margin-right: 13%;background-color: firebrick"  (click)="loginAction()">登录</button>
        </div>
      </div>
 
